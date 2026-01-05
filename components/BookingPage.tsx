@@ -235,7 +235,7 @@ const BookingPage: React.FC<BookingPageProps> = ({ onBack }) => {
             Sign-Up For <span className="text-blue-600 italic font-medium">Early Access</span>
           </h1>
           <p className="text-lg text-slate-600 mb-12 font-light leading-relaxed max-w-lg">
-            Our AI cold email system is currently under development in collaboration with an agency in Cape Town. We have a few open spots for other agencies to use the beta of our system so we can get feedback. From the sign-ups, three agencies will get the following benefits:
+            Our AI cold email system is currently under development in collaboration with select agencies. We have a few open spots for other agencies to use the beta of our system so we can get feedback. From the sign-ups, three agencies will get the following benefits:
           </p>
 
           <div className="space-y-4 mb-auto">
