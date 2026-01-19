@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 const SocialProof: React.FC = () => {
   const proofs = [
     { heading: "Higher Open Rates", text: "46% higher open rates with personalized subject lines", source: "Forbes" },
-    { heading: "Reply Rate Boost", text: "Micro targeting increases response rates by up to 32.7%", source: "Profit Outreach" },
+    { heading: "Reply Rate Boost", text: "Personalized emails in B2B see 2-3x better response rates", source: "Campaign Monitor" },
     { heading: "Better Engagement", text: "Personalized emails get 50% more website clicks", source: "HubSpot" },
     { heading: "Higher Open Rates", text: "46% higher open rates with personalized subject lines", source: "Forbes" },
-    { heading: "Reply Rate Boost", text: "Micro targeting increases response rates by up to 32.7%", source: "Profit Outreach" },
+    { heading: "Reply Rate Boost", text: "Personalized emails in B2B see 2-3x better response rates", source: "Campaign Monitor" },
     { heading: "Better Engagement", text: "Personalized emails get 50% more website clicks", source: "HubSpot" }
   ];
 
@@ -21,7 +21,7 @@ const SocialProof: React.FC = () => {
       </div>
 
       <div className="relative flex overflow-x-hidden">
-        <motion.div 
+        <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           className="flex whitespace-nowrap"

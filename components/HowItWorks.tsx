@@ -7,13 +7,13 @@ const HowItWorks: React.FC = () => {
       num: "01",
       stepLabel: "Step 1",
       title: "Quick Onboarding",
-      description: "We handle the technical setup—domains, inboxes, warmup, integrations. You fill out a simple questionnaire about your ideal prospects and messaging. That's it."
+      description: "We handle the technical setup—domains, inboxes, warmup, integrations. You fill out a simple questionnaire about your ideal security prospects and messaging. That's it."
     },
     {
       num: "02",
       stepLabel: "Step 2",
       title: "AI Launches Campaigns",
-      description: "Once a strategy has been agreed on, our AI researches your prospects, crafts personalized emails, and begins outreach automatically."
+      description: "Once a strategy has been agreed on, our AI researches your security prospects, crafts personalized emails, and begins outreach automatically."
     },
     {
       num: "03",
@@ -36,11 +36,11 @@ const HowItWorks: React.FC = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-8">
           {steps.map((step, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
+              transition={{
                 delay: i * 0.2,
                 y: { type: "spring", stiffness: 300, damping: 20 }
               }}
@@ -59,7 +59,7 @@ const HowItWorks: React.FC = () => {
                     {step.stepLabel}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-blue-700">{step.title}</h3>
                 <p className="text-slate-500 leading-relaxed font-light">{step.description}</p>
               </div>

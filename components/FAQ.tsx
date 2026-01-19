@@ -8,11 +8,11 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       q: "How long does setup actually take?",
-      a: "48 hours or less. We handle all technical configuration—domains, inbox warmup, integrations. You spend 30 minutes on a questionnaire, and we do the rest."
+      a: "48 hours or less. We handle all technical configuration—domains, inbox warmup, integrations. You spend 30 minutes on a questionnaire about your ideal security buyers, and we do the rest."
     },
     {
       q: "Will the emails sound robotic or spammy?",
-      a: "No. Our AI analyzes each prospect individually and crafts messaging that references their specific pain points, company news, or LinkedIn activity. You approve all messaging before it goes live."
+      a: "No. Our AI analyzes each prospect individually and crafts messaging that references their specific security challenges, recent incidents, or infrastructure needs. You approve all messaging before it goes live."
     },
     {
       q: "Is this compliant with email regulations?",
@@ -34,24 +34,22 @@ const FAQ: React.FC = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div 
-              key={i} 
-              className={`rounded-3xl border transition-all duration-300 ${
-                openIndex === i ? 'border-blue-200 bg-blue-50/30' : 'border-slate-100'
-              }`}
+            <div
+              key={i}
+              className={`rounded-3xl border transition-all duration-300 ${openIndex === i ? 'border-blue-200 bg-blue-50/30' : 'border-slate-100'
+                }`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full p-8 flex items-center justify-between text-left"
               >
                 <span className="text-lg font-bold text-slate-900">{faq.q}</span>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                  openIndex === i ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-400'
-                }`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openIndex === i ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-400'
+                  }`}>
                   {openIndex === i ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
               </button>
-              
+
               <AnimatePresence>
                 {openIndex === i && (
                   <motion.div

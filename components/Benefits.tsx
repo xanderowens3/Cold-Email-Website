@@ -37,7 +37,7 @@ const HandDrawnUnderline = () => {
 
 const StarField = ({ isEnhanced }: { isEnhanced: boolean }) => {
   return (
-    <div 
+    <div
       className={`absolute inset-0 pointer-events-none transition-opacity duration-700 ${isEnhanced ? 'opacity-40' : 'opacity-0'}`}
       style={{
         backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(147, 197, 253, 0.4) 1px, transparent 0)',
@@ -67,8 +67,8 @@ const SolarSystemBackground = ({ isEnhanced, scale = 1, opacityRange = [0.15, 0.
           will-change: transform;
         }
       `}</style>
-      
-      <div 
+
+      <div
         className="relative w-full h-full flex items-center justify-center transition-opacity duration-1000"
         style={{ opacity: isEnhanced ? opacityRange[1] : opacityRange[0] }}
       >
@@ -79,18 +79,18 @@ const SolarSystemBackground = ({ isEnhanced, scale = 1, opacityRange = [0.15, 0.
         )}
 
         {orbits.map((orbit, i) => (
-          <div 
-            key={i} 
-            className="absolute rounded-full border border-dashed border-white/5" 
-            style={{ 
-              width: orbit.size, 
-              height: orbit.size, 
+          <div
+            key={i}
+            className="absolute rounded-full border border-dashed border-white/5"
+            style={{
+              width: orbit.size,
+              height: orbit.size,
               borderColor: orbit.color,
             }}
           >
             <div
               className="orbit-item absolute top-0 left-1/2"
-              style={{ 
+              style={{
                 '--duration': orbit.duration,
                 width: 1,
                 height: orbit.size,
@@ -99,16 +99,16 @@ const SolarSystemBackground = ({ isEnhanced, scale = 1, opacityRange = [0.15, 0.
                 top: 0
               } as any}
             >
-               <div 
+              <div
                 className="rounded-full shadow-lg"
                 style={{
-                  width: orbit.planetSize, 
-                  height: orbit.planetSize, 
+                  width: orbit.planetSize,
+                  height: orbit.planetSize,
                   backgroundColor: orbit.planetColor,
                   transform: 'translate(-50%, -50%)',
                   boxShadow: `0 0 10px ${orbit.planetColor}`
                 }}
-               />
+              />
             </div>
           </div>
         ))}
@@ -138,7 +138,7 @@ const DashboardStat = ({ icon, label, value, trend }: { icon: React.ReactNode, l
 const PerformanceDashboard = ({ isHovered }: { isHovered: boolean }) => {
   return (
     <div className="w-full h-full bg-slate-900 rounded-[2.8rem] p-8 flex flex-col gap-6 relative overflow-hidden group border border-white/5 hardware-accelerated">
-      <div 
+      <div
         className="absolute inset-0 opacity-20 pointer-events-none transition-opacity duration-700"
         style={{
           backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`,
@@ -147,13 +147,13 @@ const PerformanceDashboard = ({ isHovered }: { isHovered: boolean }) => {
           willChange: 'opacity'
         }}
       />
-      
-      <div 
-        className={`absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[80px] rounded-full transition-opacity duration-700 hardware-accelerated ${isHovered ? 'opacity-100' : 'opacity-40'}`} 
+
+      <div
+        className={`absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[80px] rounded-full transition-opacity duration-700 hardware-accelerated ${isHovered ? 'opacity-100' : 'opacity-40'}`}
         style={{ willChange: 'opacity' }}
       />
-      <div 
-        className={`absolute bottom-0 left-0 w-64 h-64 bg-indigo-600/10 blur-[80px] rounded-full transition-opacity duration-700 hardware-accelerated ${isHovered ? 'opacity-100' : 'opacity-40'}`} 
+      <div
+        className={`absolute bottom-0 left-0 w-64 h-64 bg-indigo-600/10 blur-[80px] rounded-full transition-opacity duration-700 hardware-accelerated ${isHovered ? 'opacity-100' : 'opacity-40'}`}
         style={{ willChange: 'opacity' }}
       />
 
@@ -182,10 +182,10 @@ const PerformanceDashboard = ({ isHovered }: { isHovered: boolean }) => {
           <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Growth Trajectory</span>
           <div className="w-2 h-2 rounded-full bg-blue-400 opacity-50" />
         </div>
-        
+
         <div className="mt-auto flex items-end gap-2 h-32 px-2">
           {[40, 60, 45, 80, 55, 90, 75, 100, 85, 110, 95, 120].map((height, i) => (
-            <div 
+            <div
               key={i}
               className="flex-1 bg-gradient-to-t from-blue-600/40 via-blue-500/60 to-blue-400 rounded-t-lg transition-all duration-700"
               style={{ height: `${height}%`, willChange: 'height' }}
@@ -201,7 +201,7 @@ const BenefitCard: React.FC<{ benefit: any; index: number }> = ({ benefit, index
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.4 }}
@@ -210,8 +210,8 @@ const BenefitCard: React.FC<{ benefit: any; index: number }> = ({ benefit, index
       onMouseLeave={() => setIsHovered(false)}
       className="p-6 rounded-3xl border border-slate-200 bg-white/50 shadow-sm hover:shadow-md hover:bg-white hover:border-blue-200 transition-all duration-300 cursor-default group"
     >
-      <motion.div 
-        animate={{ 
+      <motion.div
+        animate={{
           scale: isHovered ? 1.15 : 1,
           backgroundColor: isHovered ? '#2563eb' : '#ffffff',
           color: isHovered ? '#ffffff' : '#2563eb'
@@ -240,21 +240,21 @@ const Benefits: React.FC = () => {
   return (
     <section id="benefits" className="py-24 px-6 md:px-12 bg-slate-50/50 relative overflow-hidden">
       <SolarSystemBackground isEnhanced={isDashboardHovered} scale={1.1} opacityRange={[0.08, 0.15]} />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-blue-600 mb-6 block">The Advantage</span>
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight">
-              Why Agencies Choose Our <span className="relative inline-block">
+              Why Cybersecurity Firms Choose Our <span className="relative inline-block">
                 <span className="relative z-10">AI Email System</span>
                 <HandDrawnUnderline />
               </span>
             </h2>
             <p className="text-lg text-slate-600 mb-10 font-light leading-relaxed">
-              We've built the ultimate conversion engine for the modern digital agency. Scale without overhead.
+              We've built the ultimate conversion engine for modern cybersecurity service providers. Scale without overhead.
             </p>
-            
+
             <div className="grid sm:grid-cols-2 gap-4">
               {benefits.map((benefit, i) => (
                 <BenefitCard key={i} benefit={benefit} index={i} />
@@ -262,7 +262,7 @@ const Benefits: React.FC = () => {
             </div>
           </div>
 
-          <div 
+          <div
             className="relative h-[600px]"
             onMouseEnter={() => setIsDashboardHovered(true)}
             onMouseLeave={() => setIsDashboardHovered(false)}
