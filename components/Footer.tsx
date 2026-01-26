@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = ({ onHomeClick, onBookClick }) => {
               <span className="text-3xl font-bold text-slate-900 tracking-tight uppercase group-hover:text-blue-600 transition-colors serif">Hermes</span>
             </button>
             <p className="text-slate-500 max-w-md font-light text-lg leading-relaxed">
-              Automating high-conversion cold email outreach for modern cybersecurity companies. Scaling your pipeline with intelligence and precision.
+              Automating high-conversion cold email outreach for modern leadership training companies. Scaling your pipeline with intelligence and precision.
             </p>
           </motion.div>
 
