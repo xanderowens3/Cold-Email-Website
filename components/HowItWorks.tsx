@@ -7,13 +7,13 @@ const HowItWorks: React.FC = () => {
       num: "01",
       stepLabel: "Step 1",
       title: "Quick Onboarding",
-      description: "We handle the technical setup—domains, inboxes, warmup, integrations. You fill out a simple questionnaire about your ideal security prospects and messaging. That's it."
+      description: "We handle the technical setup—domains, inboxes, warmup, integrations. You fill out a simple questionnaire about your ideal L&D prospects and messaging. That's it."
     },
     {
       num: "02",
       stepLabel: "Step 2",
       title: "AI Launches Campaigns",
-      description: "Once a strategy has been agreed on, our AI researches your security prospects, crafts personalized emails, and begins outreach automatically."
+      description: "Once a strategy has been agreed on, our AI researches your training prospects, crafts personalized emails, and begins outreach automatically."
     },
     {
       num: "03",

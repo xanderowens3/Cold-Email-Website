@@ -246,13 +246,13 @@ const Benefits: React.FC = () => {
           <div>
             <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-blue-600 mb-6 block">The Advantage</span>
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight">
-              Why Cybersecurity Firms Choose Our <span className="relative inline-block">
+              Why Leadership Training Companies Choose Our <span className="relative inline-block">
                 <span className="relative z-10">AI Email System</span>
                 <HandDrawnUnderline />
               </span>
             </h2>
             <p className="text-lg text-slate-600 mb-10 font-light leading-relaxed">
-              We've built the ultimate conversion engine for modern cybersecurity service providers. Scale without overhead.
+              We've built the ultimate conversion engine for modern leadership training companies. Scale without overhead.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">

@@ -8,11 +8,11 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       q: "How long does setup actually take?",
-      a: "48 hours or less. We handle all technical configuration—domains, inbox warmup, integrations. You spend 30 minutes on a questionnaire about your ideal security buyers, and we do the rest."
+      a: "48 hours or less. We handle all technical configuration—domains, inbox warmup, integrations. You spend 30 minutes on a questionnaire about your ideal L&D buyers, and we do the rest."
     },
     {
       q: "Will the emails sound robotic or spammy?",
-      a: "No. Our AI analyzes each prospect individually and crafts messaging that references their specific security challenges, recent incidents, or infrastructure needs. You approve all messaging before it goes live."
+      a: "No. Our AI analyzes each prospect individually and crafts messaging that references their specific leadership challenges, training program needs, or organizational development goals. You approve all messaging before it goes live."
     },
     {
       q: "Is this compliant with email regulations?",

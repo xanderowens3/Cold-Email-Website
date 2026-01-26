@@ -104,23 +104,22 @@ const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
         >
           <motion.div variants={item} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
             <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-700">For Cybersecurity Firms</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-700">For Leadership Training Companies</span>
           </motion.div>
 
           <motion.h1
             variants={item}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] font-bold text-slate-900 mb-10 tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl leading-[1.1] font-bold text-slate-900 mb-10 tracking-tight"
           >
-            Generate <span className="italic font-medium text-blue-600">10-15</span> Qualified<br className="hidden md:block" />
-            Meetings Per Month<br className="hidden md:block" />
-            <span className="italic font-medium text-blue-600">With One Simple System</span>
+            Start booking qualified<br />
+            meetings <span className="italic font-medium text-blue-600">automatically</span>.
           </motion.h1>
 
           <motion.p
             variants={item}
             className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed font-light"
           >
-            Our AI cold email system automates personalized outreach for cybersecurity service firms, so you can fill your pipeline with ready-to-buy prospects while focusing on what you do best.
+            Our AI cold email system automates personalized outreach for leadership training firms, so you can fill your pipeline with corporate HR/L&D decision-makers while focusing on what you do best.
           </motion.p>
 
           <motion.div variants={item} className="flex justify-center w-full">

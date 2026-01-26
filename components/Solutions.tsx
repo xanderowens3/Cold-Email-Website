@@ -66,7 +66,7 @@ const Solutions: React.FC = () => {
   const solutions = [
     {
       title: "Qualified Lead Lists",
-      description: "Not all leads are created equal. Our system uses data-driven scoring to identify security decision-makers with budget, authority, and genuine need. You spend your time talking to CISOs and IT managers ready to invest, not chasing dead ends.",
+      description: "Not all leads are created equal. Our system uses data-driven scoring to identify L&D decision-makers with budget, authority, and genuine need. You spend your time talking to corporate HR leaders and executives ready to invest in leadership development, not chasing dead ends.",
       icon: <Target className="w-8 h-8" />,
       tag: "Targeting"
     },
@@ -78,7 +78,7 @@ const Solutions: React.FC = () => {
     },
     {
       title: "AI-Powered Personalization",
-      description: "Stop sending emails that feel like spam. Our AI analyzes each prospect's security challenges—recent breaches, compliance needs, infrastructure changes—and crafts personalized outreach that starts genuine conversations. No buzzwords, no generic fluff, just relevant messaging that gets replies.",
+      description: "Stop sending emails that feel like spam. Our AI analyzes each prospect's training needs—leadership gaps, program requirements, organizational changes—and crafts personalized outreach that starts genuine conversations. No buzzwords, no generic fluff, just relevant messaging that gets replies.",
       icon: <Mail className="w-8 h-8" />,
       tag: "Engagement"
     }
