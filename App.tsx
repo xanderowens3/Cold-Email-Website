@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 // Components
 import Navbar from './components/Navbar';
@@ -32,10 +33,10 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen w-full selection:bg-blue-100 selection:text-blue-900">
       <AnimatedBackground />
-      
+
       <div className="relative z-10">
         <Navbar onBookClick={navigateToBooking} onHomeClick={navigateToHome} />
-        
+
         <main>
           <AnimatePresence mode="wait">
             {view === 'home' ? (
@@ -68,9 +69,10 @@ const App: React.FC = () => {
             )}
           </AnimatePresence>
         </main>
-        
+
         <Footer onHomeClick={navigateToHome} onBookClick={navigateToBooking} />
       </div>
+      <Analytics />
     </div>
   );
 };
