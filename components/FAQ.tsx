@@ -8,16 +8,17 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       q: "How long does setup actually take?",
-      a: "48 hours or less. We handle all technical configuration—domains, inbox warmup, integrations. You spend 30 minutes on a questionnaire about your ideal L&D buyers, and we do the rest."
+      a: "Setting up the domains, email accounts and DNS configurations takes 48 hours or less."
+    },
+    {
+      q: "How long does warm-up take?",
+      a: "Properly warming up email accounts takes about 15 business days along with specialized strategies we use. This ensures that all email accounts stay healthy and don't land in spam"
     },
     {
       q: "Will the emails sound robotic or spammy?",
-      a: "No. Our AI analyzes each prospect individually and crafts messaging that references their specific leadership challenges, training program needs, or organizational development goals. You approve all messaging before it goes live."
+      a: "No. Our AI analyzes each prospect individually and crafts messaging that references their specific business challenges, growth needs, or organizational goals. You approve all messaging before it goes live."
     },
-    {
-      q: "Is this compliant with email regulations?",
-      a: "Yes, 100%. We're fully CAN-SPAM and GDPR compliant with automatic unsubscribe handling, proper authentication, and data privacy protection built in."
-    },
+
     {
       q: "Can this integrate with our existing CRM?",
       a: "Yes. We integrate with all major CRMs (HubSpot, Salesforce, Pipedrive, and more) plus calendar tools like Calendly. Setup takes minutes, not weeks."

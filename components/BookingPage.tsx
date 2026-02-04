@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle, Gift, MessageSquare, Zap, Building2, Globe, Mail, User, Send, ChevronRight } from 'lucide-react';
+import WreathIcon from '../Images/Wreath Icon.svg';
+import AirplaneIcon from '../Images/Airplane.svg';
+import TridentIcon from '../Images/Trident Icon.svg';
 
 interface BookingPageProps {
   onBack: () => void;
@@ -121,21 +124,23 @@ const BookingPage: React.FC<BookingPageProps> = ({ onBack }) => {
     }
   };
 
+
+
   const benefits = [
     {
-      icon: <Gift size={20} />,
-      title: "Free Access",
-      description: "Use our systems completely free during the beta period"
+      icon: <img src={WreathIcon} className="w-8 h-8 group-hover:brightness-0 group-hover:invert transition-all duration-300" alt="Exclusive Access" />,
+      title: "Exclusive Access",
+      description: "Use our systems at heavily discounted rates during the beta period"
     },
     {
-      icon: <MessageSquare size={20} />,
+      icon: <img src={AirplaneIcon} className="w-8 h-8 group-hover:brightness-0 group-hover:invert transition-all duration-300" alt="Product Influence" />,
       title: "Product Influence",
       description: "Help shape the next wave of high-converting cold outreach with your insights"
     },
     {
-      icon: <Zap size={20} />,
-      title: "Priority Access",
-      description: "Once the service goes live, first sign-ups will gain priority access to the finished product and skip waiting lists"
+      icon: <img src={TridentIcon} className="w-8 h-8 group-hover:brightness-0 group-hover:invert transition-all duration-300" alt="Lifetime Discount Lock-In" />,
+      title: "Lifetime Discount Lock-In",
+      description: "Once our service goes live, first sign-ups will get a discounted rate of 40% for life."
     }
   ];
 
@@ -235,7 +240,7 @@ const BookingPage: React.FC<BookingPageProps> = ({ onBack }) => {
             Sign-Up For <span className="text-blue-600 italic font-medium">Early Access</span>
           </h1>
           <p className="text-lg text-slate-600 mb-12 font-light leading-relaxed max-w-lg">
-            Our AI cold email system is currently under development in collaboration with select leadership training companies. We have a few open spots for other firms to use the beta of our system so we can get feedback. From the sign-ups, three firms will get the following benefits:
+            Our AI cold email system is currently under development in collaboration with select digital marketing agencies. We have a few open spots for other firms to use the beta of our system so we can get feedback. From the sign-ups, <span className="font-semibold text-blue-500 whitespace-nowrap">three agencies</span> will get the following benefits:
           </p>
 
           <div className="space-y-4 mb-auto">
@@ -404,7 +409,7 @@ const BookingPage: React.FC<BookingPageProps> = ({ onBack }) => {
                   </div>
 
                   <p className="text-slate-400 font-light text-base leading-relaxed mb-10">
-                    Help us tailor the perfect solution for your firm by answering a few quick questions about your current setup and future goals.
+                    Help us tailor the perfect solution for your agency by answering a few quick questions about your current setup and future goals.
                   </p>
 
                   <div className="space-y-4">

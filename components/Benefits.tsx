@@ -1,6 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { User, Plug, BarChart3, Clock, TrendingUp, Mail, Calendar, DollarSign, ArrowUpRight } from 'lucide-react';
+import { TrendingUp, Mail, Calendar, DollarSign, ArrowUpRight } from 'lucide-react';
+import ListIcon from '../Images/List Icon.svg';
+import IntegrationIcon from '../Images/Integration Icon.svg';
+import HourglassIcon from '../Images/Hourglass Icon.svg';
+import ScaleIcon from '../Images/Scale Icon.svg';
 
 const HandDrawnUnderline = () => {
   return (
@@ -219,7 +223,11 @@ const BenefitCard: React.FC<{ benefit: any; index: number }> = ({ benefit, index
         transition={{ type: "spring", stiffness: 400, damping: 15 }}
         className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 border border-slate-100 shadow-sm hardware-accelerated"
       >
-        {React.cloneElement(benefit.icon, { strokeWidth: 2, size: 24 })}
+        <img
+          src={benefit.iconSrc}
+          alt={benefit.title}
+          className={`w-8 h-8 transition-all duration-200 ${isHovered ? 'brightness-0 invert' : ''}`}
+        />
       </motion.div>
       <h4 className="text-lg font-bold mb-2 text-slate-900 transition-colors group-hover:text-blue-600">{benefit.title}</h4>
       <p className="text-sm text-slate-500 leading-relaxed font-light">{benefit.description}</p>
@@ -231,10 +239,10 @@ const Benefits: React.FC = () => {
   const [isDashboardHovered, setIsDashboardHovered] = useState(false);
 
   const benefits = useMemo(() => [
-    { title: "24/7 Prospecting", description: "The AI continuously finds, researches, and contacts qualified prospects automatically.", icon: <User /> },
-    { title: "Seamless Integration", description: "Plugs directly into your existing systems to fill your calendar without any tech headaches", icon: <Plug /> },
-    { title: "Time Saver", description: "Systematically produces hyper-personalized messaging for each prospect in hours instead of weeks.", icon: <Clock /> },
-    { title: "Real-Time Analytics", description: "Track opens, replies and ROI across all campaigns. Optimize on the fly.", icon: <BarChart3 /> }
+    { title: "24/7 Prospecting", description: "Our AI systems continuously find, research, and personalizes for qualified prospects automatically.", iconSrc: ListIcon },
+    { title: "Seamless Integration", description: "Plugs directly into your existing systems to fill your calendar without any tech headaches", iconSrc: IntegrationIcon },
+    { title: "Time Saver", description: "Systematically produces hyper-personalized messaging for each prospect in hours instead of weeks.", iconSrc: HourglassIcon },
+    { title: "Real-Time Analytics", description: "Track opens, replies and ROI across all campaigns. Optimize on the fly.", iconSrc: ScaleIcon }
   ], []);
 
   return (
@@ -246,13 +254,13 @@ const Benefits: React.FC = () => {
           <div>
             <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-blue-600 mb-6 block">The Advantage</span>
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight">
-              Why Leadership Training Companies Choose Our <span className="relative inline-block">
+              Why Digital Marketing Agencies Choose Our <span className="relative inline-block">
                 <span className="relative z-10">AI Email System</span>
                 <HandDrawnUnderline />
               </span>
             </h2>
             <p className="text-lg text-slate-600 mb-10 font-light leading-relaxed">
-              We've built the ultimate conversion engine for modern leadership training companies. Scale without overhead.
+              We've built the ultimate conversion engine for modern digital marketing agencies. Scale without overhead.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">

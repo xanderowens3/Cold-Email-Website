@@ -104,7 +104,7 @@ const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
         >
           <motion.div variants={item} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
             <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-700">For Leadership Training Companies</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-700">For Digital Marketing Agencies</span>
           </motion.div>
 
           <motion.h1
@@ -119,7 +119,7 @@ const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
             variants={item}
             className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed font-light"
           >
-            Our AI cold email system automates personalized outreach for leadership training firms, so you can fill your pipeline with corporate HR/L&D decision-makers while focusing on what you do best.
+            Our AI cold email system automates personalized outreach for digital marketing agencies, so you can fill your pipeline with ideal clients while you focus on strategy and delivery.
           </motion.p>
 
           <motion.div variants={item} className="flex justify-center w-full">

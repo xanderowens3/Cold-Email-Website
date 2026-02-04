@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Target, ShieldCheck, Mail } from 'lucide-react';
+// Imports for new SVG icons
+import TargetIcon from '../Images/Target Icon.svg';
+import ColumnIcon from '../Images/Column Icon.svg';
+import LightningBoltIcon from '../Images/Lightning Bolt Icon.svg';
 
 // Added React.FC type to handle implicit props like 'key' in JSX maps
 const SolutionCard: React.FC<{ sol: any; index: number }> = ({ sol, index }) => {
@@ -33,9 +36,13 @@ const SolutionCard: React.FC<{ sol: any; index: number }> = ({ sol, index }) => 
       />
 
       <div className="relative z-20 flex flex-col h-full">
-        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shrink-0 transition-all duration-200 ${isHovered ? 'bg-white/20 text-white' : 'bg-blue-50 text-blue-600'
+        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shrink-0 transition-all duration-200 ${isHovered ? 'bg-white/20' : 'bg-blue-50'
           }`}>
-          {React.cloneElement(sol.icon, { strokeWidth: 1.5 })}
+          <img
+            src={sol.iconSrc}
+            alt={sol.title}
+            className={`w-10 h-10 transition-all duration-200 ${isHovered ? 'brightness-0 invert' : ''}`}
+          />
         </div>
 
         <span className={`text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block shrink-0 transition-colors duration-200 ${isHovered ? 'text-blue-100' : 'text-slate-400'
@@ -66,20 +73,20 @@ const Solutions: React.FC = () => {
   const solutions = [
     {
       title: "Qualified Lead Lists",
-      description: "Not all leads are created equal. Our system uses data-driven scoring to identify L&D decision-makers with budget, authority, and genuine need. You spend your time talking to corporate HR leaders and executives ready to invest in leadership development, not chasing dead ends.",
-      icon: <Target className="w-8 h-8" />,
+      description: "Not all leads are created equal. Our system uses data-driven scoring to identify ideal decision-makers with budget, authority, and genuine need. You spend your time talking to key stakeholders and executives ready to invest, not chasing dead ends.",
+      iconSrc: TargetIcon,
       tag: "Targeting"
     },
     {
       title: "Done-For-You Deliverability",
       description: "Forget about technical setup. We provide fully done-for-you warm-up management, optimized sending schedules, automatic email rotation, and real-time spam monitoring. Your emails land in the inbox, not the spam folder—guaranteed.",
-      icon: <ShieldCheck className="w-8 h-8" />,
+      iconSrc: ColumnIcon,
       tag: "Infrastructure"
     },
     {
       title: "AI-Powered Personalization",
-      description: "Stop sending emails that feel like spam. Our AI analyzes each prospect's training needs—leadership gaps, program requirements, organizational changes—and crafts personalized outreach that starts genuine conversations. No buzzwords, no generic fluff, just relevant messaging that gets replies.",
-      icon: <Mail className="w-8 h-8" />,
+      description: "Stop sending emails that feel like spam. Our AI analyzes each prospect's specific needs—marketing gaps, growth goals, organizational changes—and crafts personalized outreach that starts genuine conversations. No buzzwords, no generic fluff, just relevant messaging that gets replies.",
+      iconSrc: LightningBoltIcon,
       tag: "Engagement"
     }
   ];

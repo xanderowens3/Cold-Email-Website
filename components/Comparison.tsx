@@ -16,7 +16,7 @@ const SolarSystem = ({ isHovered, color = "blue" }: { isHovered: boolean, color?
   }[color];
 
   return (
-    <div 
+    <div
       className="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden transition-opacity duration-500 hardware-accelerated"
       style={{ opacity: isHovered ? 1 : 0 }}
     >
@@ -30,32 +30,32 @@ const SolarSystem = ({ isHovered, color = "blue" }: { isHovered: boolean, color?
           will-change: transform;
         }
       `}</style>
-      
+
       <div className="relative w-full h-full flex items-center justify-center">
         <div className="absolute w-12 h-12 rounded-full blur-xl opacity-50" style={{ backgroundColor: colors.center }} />
 
         {orbits.map((orbit, i) => (
-          <div 
-            key={i} 
-            className="absolute rounded-full border" 
-            style={{ 
-              width: orbit.size, 
-              height: orbit.size, 
-              borderColor: colors.orbit 
+          <div
+            key={i}
+            className="absolute rounded-full border"
+            style={{
+              width: orbit.size,
+              height: orbit.size,
+              borderColor: colors.orbit
             }}
           >
             <div
               className="orbit-rotate absolute top-0 left-1/2"
-              style={{ 
+              style={{
                 '--duration': orbit.duration,
-                width: 1, 
-                height: orbit.size, 
+                width: 1,
+                height: orbit.size,
                 transformOrigin: `0 ${orbit.size / 2}px`,
                 top: 0,
                 left: '50%'
               } as any}
             >
-              <div 
+              <div
                 className="rounded-full shadow-md"
                 style={{
                   width: orbit.planetSize,
@@ -112,10 +112,10 @@ const Comparison: React.FC = () => {
           >
             <SolarSystem isHovered={hoveredCard === 'old'} color="red" />
             <div className="relative z-10">
-              <motion.div 
-                animate={{ 
+              <motion.div
+                animate={{
                   scale: hoveredCard === 'old' ? 1.2 : 1,
-                  rotate: hoveredCard === 'old' ? -10 : 0 
+                  rotate: hoveredCard === 'old' ? -10 : 0
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600 mb-8 border border-red-200 shadow-sm"
@@ -127,7 +127,7 @@ const Comparison: React.FC = () => {
               <ul className="space-y-6">
                 {oldWay.map((item, i) => (
                   <li key={i} className="flex gap-4 items-start transition-opacity">
-                    <motion.div 
+                    <motion.div
                       animate={{ scale: hoveredCard === 'old' ? 1.1 : 1 }}
                       transition={{ delay: i * 0.05, type: "spring", stiffness: 300 }}
                       className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center text-red-600 mt-1 flex-shrink-0"
@@ -148,8 +148,8 @@ const Comparison: React.FC = () => {
           >
             <SolarSystem isHovered={hoveredCard === 'new'} color="blue" />
             <div className="relative z-10">
-              <motion.div 
-                animate={{ 
+              <motion.div
+                animate={{
                   scale: hoveredCard === 'new' ? 1.25 : 1,
                   rotate: hoveredCard === 'new' ? 15 : 0,
                   y: hoveredCard === 'new' ? -4 : 0
@@ -164,7 +164,7 @@ const Comparison: React.FC = () => {
               <ul className="space-y-6">
                 {newWay.map((item, i) => (
                   <li key={i} className="flex gap-4 items-start">
-                    <motion.div 
+                    <motion.div
                       animate={{ scale: hoveredCard === 'new' ? 1.2 : 1 }}
                       transition={{ delay: i * 0.05, type: "spring", stiffness: 400, damping: 10 }}
                       className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 mt-1 flex-shrink-0 border border-blue-500/30"

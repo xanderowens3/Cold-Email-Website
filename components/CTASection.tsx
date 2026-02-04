@@ -8,7 +8,7 @@ interface CTASectionProps {
 const CTASection: React.FC<CTASectionProps> = ({ onBookClick }) => {
   return (
     <section id="book-call" className="scroll-mt-32 py-12 px-6 md:px-12">
-      <motion.div 
+      <motion.div
         initial="initial"
         whileHover="hovered"
         variants={{
@@ -31,7 +31,7 @@ const CTASection: React.FC<CTASectionProps> = ({ onBookClick }) => {
           <p className="text-lg text-slate-400 mb-10 font-light leading-relaxed">
             Understand your next move for cold outreach success.
           </p>
-          
+
           <div className="flex flex-col items-center gap-4">
             <motion.button
               onClick={onBookClick}
@@ -43,15 +43,15 @@ const CTASection: React.FC<CTASectionProps> = ({ onBookClick }) => {
               <motion.div
                 variants={{
                   initial: { opacity: 0, backgroundPosition: '0% 50%' },
-                  btnHovered: { 
+                  btnHovered: {
                     opacity: 1,
                     backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                     transition: {
                       opacity: { duration: 0.3 },
-                      backgroundPosition: { 
-                        duration: 4, 
-                        repeat: Infinity, 
-                        ease: "easeInOut" 
+                      backgroundPosition: {
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut"
                       }
                     }
                   }
@@ -62,10 +62,10 @@ const CTASection: React.FC<CTASectionProps> = ({ onBookClick }) => {
                 }}
                 className="absolute inset-0 z-0"
               />
-              
+
               <span className="relative z-10">Sign Up</span>
-              
-              <motion.div 
+
+              <motion.div
                 className="absolute inset-0 z-20 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"
               />
             </motion.button>
