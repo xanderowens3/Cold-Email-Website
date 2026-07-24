@@ -56,16 +56,7 @@ const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-0 pointer-events-none overflow-hidden hardware-accelerated bg-[#f8fafc]">
       
-      {/* SVG Filters for organic shadows */}
-      <svg className="hidden">
-        <filter id="organic-shadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
-            <animate attributeName="baseFrequency" values="0.015;0.02;0.015" dur="20s" repeatCount="indefinite" />
-          </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" result="displaced" />
-          <feGaussianBlur in="displaced" stdDeviation="12" result="blurred" />
-        </filter>
-      </svg>
+      {/* Filter removed for performance (60fps scrolling) */}
 
       <style>{`
         @keyframes drift1 {
@@ -83,10 +74,10 @@ const AnimatedBackground: React.FC = () => {
           50% { opacity: 0.7; }
           100% { opacity: 0.5; }
         }
-        .bg-drift-1 { animation: drift1 25s infinite ease-in-out; }
-        .bg-drift-2 { animation: drift2 30s infinite ease-in-out; }
+        .bg-drift-1 { animation: drift1 25s infinite ease-in-out; will-change: transform; }
+        .bg-drift-2 { animation: drift2 30s infinite ease-in-out; will-change: transform; }
         .sun-pulse { animation: sunPulse 10s infinite ease-in-out; }
-        .hardware-accelerated { transform: translate3d(0,0,0); backface-visibility: hidden; }
+        .hardware-accelerated { transform: translate3d(0,0,0); backface-visibility: hidden; will-change: transform; }
       `}</style>
 
       {/* Balanced Sunlight Atmosphere */}
@@ -110,12 +101,11 @@ const AnimatedBackground: React.FC = () => {
 
       {/* Organic Monument & Olive Branch Shadows */}
       <motion.div 
-        className="absolute inset-[-60%] mix-blend-multiply opacity-[0.04] origin-center"
+        className="absolute inset-[-60%] mix-blend-multiply opacity-[0.04] origin-center hardware-accelerated"
         style={{
           x: shadowX,
           y: shadowY,
           rotate: shadowRotate,
-          filter: 'url(#organic-shadow)',
         }}
       >
         {/* The Temple Roof/Architrave Shadow */}
