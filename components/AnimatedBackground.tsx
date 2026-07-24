@@ -56,10 +56,12 @@ const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-0 pointer-events-none overflow-hidden hardware-accelerated bg-[#f8fafc]">
       
-      {/* SVG Filters for organic shadows (Static to prevent lag) */}
+      {/* SVG Filters for organic shadows (Fully animated) */}
       <svg className="hidden">
         <filter id="organic-shadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
+          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
+            <animate attributeName="baseFrequency" values="0.015;0.02;0.015" dur="20s" repeatCount="indefinite" />
+          </feTurbulence>
           <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" result="displaced" />
           <feGaussianBlur in="displaced" stdDeviation="12" result="blurred" />
         </filter>
@@ -113,17 +115,16 @@ const AnimatedBackground: React.FC = () => {
           x: shadowX,
           y: shadowY,
           rotate: shadowRotate,
-          filter: 'url(#organic-shadow)',
         }}
       >
         {/* The Temple Roof/Architrave Shadow */}
-        <div className="absolute top-[-5%] left-[-20%] w-[150%] h-[18%] bg-[#1e293b] transform -rotate-[15deg]" />
+        <div className="absolute top-[-5%] left-[-20%] w-[150%] h-[18%] bg-[#1e293b] transform -rotate-[15deg]" style={{ filter: 'url(#organic-shadow)' }} />
 
         {/* The Column Shadows */}
-        <div className="absolute top-[5%] left-[10%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" />
-        <div className="absolute top-[5%] left-[35%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" />
-        <div className="absolute top-[5%] left-[60%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" />
-        <div className="absolute top-[5%] left-[85%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" />
+        <div className="absolute top-[5%] left-[10%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" style={{ filter: 'url(#organic-shadow)' }} />
+        <div className="absolute top-[5%] left-[35%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" style={{ filter: 'url(#organic-shadow)' }} />
+        <div className="absolute top-[5%] left-[60%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" style={{ filter: 'url(#organic-shadow)' }} />
+        <div className="absolute top-[5%] left-[85%] w-[8%] h-[200%] bg-[#1e293b] transform -rotate-[15deg]" style={{ filter: 'url(#organic-shadow)' }} />
 
         {/* --- Swaying Olive Branches --- */}
         
