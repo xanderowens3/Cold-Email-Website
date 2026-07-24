@@ -101,7 +101,7 @@ const AnimatedBackground: React.FC = () => {
 
       {/* Organic Monument & Olive Branch Shadows */}
       <motion.div 
-        className="absolute inset-[-60%] mix-blend-multiply opacity-[0.04] origin-center hardware-accelerated"
+        className="absolute inset-[-60%] mix-blend-multiply opacity-[0.08] origin-center hardware-accelerated"
         style={{
           x: shadowX,
           y: shadowY,
