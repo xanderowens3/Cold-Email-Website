@@ -26,7 +26,7 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="scroll-mt-32 py-24 px-6 md:px-12 bg-white">
+    <section id="faq" className="scroll-mt-32 py-24 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-blue-600 mb-6 block">FAQ</span>
@@ -37,7 +37,7 @@ const FAQ: React.FC = () => {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className={`rounded-3xl border transition-all duration-300 ${openIndex === i ? 'border-blue-200 bg-blue-50/30' : 'border-slate-100'
+              className={`rounded-3xl border transition-all duration-300 bg-white ${openIndex === i ? 'border-blue-200' : 'border-slate-100'
                 }`}
             >
               <button
